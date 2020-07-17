@@ -78,7 +78,7 @@
     <maven-shade-plugin.version>2.4.3</maven-shade-plugin.version>
     <cub-util-db-encrypt.version>2.2.0-RELEASE</cub-util-db-encrypt.version>
     <validation-api.version>2.0.0.Final</validation-api.version>
-    <hibernate-validator.version>6.0.2.Final</hibernate-validator.version>
+    <hibernate-validator.version>6.1.0.Final</hibernate-validator.version>
     <hibernate-validator-annotation-processor.version>6.0.2.Final
     </hibernate-validator-annotation-processor.version>
     <javax.el-api.version>3.0.0</javax.el-api.version>
