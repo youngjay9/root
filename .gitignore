@@ -1,19 +1,3 @@
 .project
 
-xjc/com/ch/myr/wsdl/package-info.java
-
-xjc/com/ch/myr/wsdl/OnlineResponse.java
-
-xjc/com/ch/myr/wsdl/Online.java
-
-.settings/org.eclipse.m2e.core.prefs
-
-.settings/org.eclipse.core.resources.prefs
-
-xjc/com/ch/myr/wsdl/ServiceResponse.java
-
-xjc/com/ch/myr/wsdl/Service.java
-
-xjc/com/ch/myr/wsdl/ObjectFactory.java
-
-xjc/META-INF/sun-jaxb.episode
+target/
