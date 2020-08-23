@@ -14,6 +14,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
+    <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
     <maven.compiler.target>1.8</maven.compiler.target>
     <maven.comiiler.encoding>UTF-8</maven.comiiler.encoding>
     <jdk.version>1.8</jdk.version>
@@ -24,6 +25,8 @@
     <mysql.version>8.0.20</mysql.version>
     <!-- plugin version -->
     <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+    <!-- swagger version-->
+    <swagger.version>2.9.1</swagger.version>
   </properties>
 
   <repositories>
@@ -77,6 +80,18 @@
 
       <dependency>
         <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+        <version>${spring.boot.starter.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-devtools</artifactId>
+        <version>${spring.boot.starter.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-test</artifactId>
         <scope>test</scope>
         <version>${spring.boot.starter.version}</version>
@@ -87,6 +102,18 @@
         <groupId>mysql</groupId>
         <artifactId>mysql-connector-java</artifactId>
         <version>${mysql.version}</version>
+      </dependency>
+
+      <!-- swagger -->
+      <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-swagger2</artifactId>
+        <version>${swagger.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-swagger-ui</artifactId>
+        <version>${swagger.version}</version>
       </dependency>
 
     </dependencies>
@@ -105,33 +132,34 @@
           </configuration>
         </plugin>
 
+        <plugin>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-maven-plugin</artifactId>
+          <version>${spring.boot.starter.version}</version>
+          <configuration>
+            <mainClass>com.jay.Application</mainClass>
+            <layout>ZIP</layout>
+          </configuration>
+          <executions>
+            <execution>
+              <goals>
+                <goal>repackage</goal>
+                <goal>build-info</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+
       </plugins>
     </pluginManagement>
 
     <!-- To use the plugin goals in your POM or parent POM -->
     <plugins>
-
       <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-        <version>${spring.boot.starter.version}</version>
-        <configuration>
-          <mainClass>com.jay.Application</mainClass>
-          <layout>ZIP</layout>
-        </configuration>
-        <executions>
-          <execution>
-            <goals>
-              <goal>repackage</goal>
-              <goal>build-info</goal>
-            </goals>
-          </execution>
-        </executions>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>${maven-deploy-plugin.version}</version>
       </plugin>
-
-
-
-
     </plugins>
   </build>
 
