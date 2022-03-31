@@ -19,7 +19,7 @@
     <maven.comiiler.encoding>UTF-8</maven.comiiler.encoding>
     <jdk.version>1.8</jdk.version>
     <!-- spring boot starter -->
-    <spring.boot.starter.version>2.3.1.RELEASE</spring.boot.starter.version>
+    <spring.boot.starter.version>2.5.12</spring.boot.starter.version>
 
     <!-- MySQL JDBC driver -->
     <mysql.version>8.0.20</mysql.version>
