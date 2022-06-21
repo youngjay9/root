@@ -22,7 +22,7 @@
     <spring.boot.starter.version>2.3.1.RELEASE</spring.boot.starter.version>
 
     <!-- MySQL JDBC driver -->
-    <mysql.version>8.0.20</mysql.version>
+    <mysql.version>8.0.28</mysql.version>
     <!-- plugin version -->
     <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
     <!-- swagger version-->
